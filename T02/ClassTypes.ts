@@ -1,6 +1,13 @@
 class MathFunctions {
-    valueOne: number
-    valueTwo: number
+    // valueOne: number
+    // valueTwo: number
+
+    // constructor(valueOne: number, valueTwo: number) {
+    //     this.valueOne = valueOne
+    //     this.valueTwo = valueTwo
+    // }
+
+    constructor(private valueOne: number, private valueTwo: number) { }
 
     private add: () => number = () => (this.valueOne + this.valueTwo)
     private substract: () => number = () => (this.valueOne - this.valueTwo)
@@ -12,9 +19,6 @@ class MathFunctions {
     }
 }
 
-let mathFunctions = new MathFunctions()
-
-mathFunctions.valueOne = 23
-mathFunctions.valueTwo = 89
+let mathFunctions = new MathFunctions(23, 89)
 
 console.log(mathFunctions.executeAll())
