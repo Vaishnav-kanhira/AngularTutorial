@@ -9,5 +9,13 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Angular - Hello-World';
+  title = 'timer started'
+  time = 0
+
+  constructor() {
+    setTimeout(() => {
+      this.time = 3
+      this.title = "timer ended"
+    }, 3000);
+  }
 }
