@@ -1,1 +1,3 @@
-<p>todo-listing works!</p>
+<ul *ngFor = "let todo of todos">
+    <li>active = {{todo.active}} | serialNumber = {{todo.serialNumber}} | title = {{todo.title}} | description = {{todo.description}}</li>
+</ul>
