@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TodoComponent } from "./todos/todo/todo.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, TodoComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -13,9 +14,10 @@ export class AppComponent {
   time = 0
 
   constructor() {
+    let time = 3000
     setTimeout(() => {
-      this.time = 3
+      this.time = time
       this.title = "timer ended"
-    }, 3000);
+    }, time);
   }
 }
