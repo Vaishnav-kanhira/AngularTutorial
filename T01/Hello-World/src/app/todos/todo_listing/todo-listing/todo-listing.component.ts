@@ -15,10 +15,10 @@ export class TodoListingComponent {
 
   constructor() {
     this.todos = [
-      new Todo(0, "title 1", "description 1", false),
-      new Todo(0, "title 2", "description 2", false),
-      new Todo(0, "title 3", "description 3", false),
-      new Todo(0, "title 4", "description 4", false),
+      new Todo(1, "title 1", "description 1", false),
+      new Todo(2, "title 2", "description 2", false),
+      new Todo(3, "title 3", "description 3", false),
+      new Todo(4, "title 4", "description 4", false),
     ]
   }
 }
