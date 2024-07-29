@@ -1,1 +1,5 @@
-<li>active = {{todo.active}} | serialNumber = {{todo.serialNumber}} | title = {{todo.title}} | description = {{todo.description}}</li>
+<div>
+    <h3>{{todo.title}}</h3>
+    <p>{{todo.description}}</p>
+    <button (click)="onClick()">Delete</button>
+</div>

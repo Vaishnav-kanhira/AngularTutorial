@@ -10,4 +10,8 @@ import { Todo } from '../../../../data/Todo';
 })
 export class TodoListItemComponent {
   @Input() todo!: Todo
+
+  onClick() {
+    console.log(`onclick called for serialNumber = ${this.todo.serialNumber}`)
+  }
 }
