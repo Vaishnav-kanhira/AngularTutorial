@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from '../../../../data/Todo';
 
 @Component({
@@ -10,8 +10,10 @@ import { Todo } from '../../../../data/Todo';
 })
 export class TodoListItemComponent {
   @Input() todo!: Todo
+  @Output() todoDelete: EventEmitter<Todo> = new EventEmitter();
 
-  onClick() {
-    console.log(`onclick called for serialNumber = ${this.todo.serialNumber}`)
+  onClick(todo: Todo) {
+    this.todoDelete.emit(todo)
+    console.log(`deleted serialNumber = ${this.todo.serialNumber}`)
   }
 }

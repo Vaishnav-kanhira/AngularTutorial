@@ -21,4 +21,9 @@ export class TodoListingComponent {
       new Todo(4, "title 4", "description 4", false),
     ]
   }
+  deleteTodo(todo: Todo) {
+    let index = this.todos.indexOf(todo)
+    this.todos.splice(index,1)
+    console.log(todo)
+  }
 }
