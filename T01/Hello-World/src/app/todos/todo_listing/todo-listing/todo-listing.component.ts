@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Todo } from '../../../../data/Todo';
 import { CommonModule } from '@angular/common';
 import { TodoListItemComponent } from "../../todo_list_item/todo-list-item/todo-list-item.component";
+import { AddTodoComponent } from "../../add_todo/add-todo/add-todo.component";
 
 @Component({
   selector: 'app-todo-listing',
   standalone: true,
-  imports: [CommonModule, TodoListItemComponent],
+  imports: [CommonModule, TodoListItemComponent, AddTodoComponent],
   templateUrl: './todo-listing.component.html',
   styleUrl: './todo-listing.component.css'
 })
